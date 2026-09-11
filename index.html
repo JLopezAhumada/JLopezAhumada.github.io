@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jesús López · Frontend Developer y Analista de Sistemas</title>
+<meta name="description" content="Portafolio de Jesús David López Ahumada. Frontend Developer y Analista de Sistemas en Barranquilla: JavaScript, Java, MySQL, redes y servidores Linux Debian.">
+<meta name="author" content="Jesús David López Ahumada">
+<meta name="theme-color" content="#08080a">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Jesús López · Frontend Developer y Analista de Sistemas">
+<meta property="og:description" content="JavaScript, Java, MySQL, redes y servidores Linux Debian.">
+<meta property="og:image" content="assets/img/jesus-lopez.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+<link rel="preload" href="assets/fonts/outfit-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/archivo-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/sections.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jesús David López Ahumada",
+  "jobTitle": "Frontend Developer y Analista de Sistemas",
+  "address": { "@type": "PostalAddress", "addressLocality": "Barranquilla", "addressCountry": "CO" },
+  "email": "jlahumada1430@hotmail.com",
+  "knowsLanguage": ["es", "en"],
+  "knowsAbout": ["JavaScript", "Java", "PostgreSQL", "MySQL", "Redes TCP/IP", "Linux Debian", "Soporte TI"],
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Institución Universitaria de Barranquilla" },
+  "sameAs": [
+    "https://www.linkedin.com/in/jdlopez30",
+    "https://github.com/JLopezAhumada"
+  ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip" href="#contenido" data-i18n="skip">Saltar al contenido</a>
+<div id="top-sentinel" aria-hidden="true" style="position:absolute;top:0;height:1px;width:1px"></div>
+
+<div class="page">
+
+<header class="nav glass" id="nav">
+  <nav class="nav__inner" aria-label="Principal">
+    <a class="nav__mark" href="#inicio">Jdlopez</a>
+
+    <div class="nav__center">
+      <ul class="nav__links" id="nav-links">
+        <li><a class="nav__link" href="#perfil"      data-i18n="nav.perfil">Perfil</a></li>
+        <li><a class="nav__link" href="#stack"       data-i18n="nav.stack">Stack</a></li>
+        <li><a class="nav__link" href="#proyectos"   data-i18n="nav.proyectos">Proyectos</a></li>
+        <li><a class="nav__link" href="#experiencia" data-i18n="nav.experiencia">Experiencia</a></li>
+        <li><a class="nav__link" href="#cv"          data-i18n="nav.cv">Hoja de vida</a></li>
+      </ul>
+      <span class="nav__ind" id="nav-ind" aria-hidden="true"></span>
+    </div>
+
+    <div class="nav__end">
+      <button class="langbtn" id="langbtn" type="button"
+              data-i18n-attr="aria-label:lang.switch" aria-label="Cambiar idioma">
+        <span data-icon="globe"></span>
+        <span id="langbtn-code">EN</span>
+      </button>
+
+      <a class="btn btn--primary btn--sm" href="#contacto" data-i18n="nav.cta">Hablemos</a>
+
+      <button class="btn btn--icon nav__burger" id="burger" type="button"
+              aria-expanded="false" aria-controls="sheet"
+              data-i18n-attr="aria-label:nav.menu" aria-label="Abrir menú"
+              data-icon="menu"></button>
+    </div>
+  </nav>
+</header>
+
+<div class="sheet" id="sheet" aria-hidden="true">
+  <button class="btn btn--icon sheet__close" id="sheet-close" type="button"
+          data-i18n-attr="aria-label:nav.cerrar" aria-label="Cerrar menú" data-icon="close"></button>
+
+  <nav aria-label="Menú">
+    <a class="sheet__link" style="--i:0" href="#perfil"      data-i18n="nav.perfil">Perfil</a>
+    <a class="sheet__link" style="--i:1" href="#stack"       data-i18n="nav.stack">Stack</a>
+    <a class="sheet__link" style="--i:2" href="#proyectos"   data-i18n="nav.proyectos">Proyectos</a>
+    <a class="sheet__link" style="--i:3" href="#experiencia" data-i18n="nav.experiencia">Experiencia</a>
+    <a class="sheet__link" style="--i:4" href="#cv"          data-i18n="nav.cv">Hoja de vida</a>
+    <a class="sheet__link" style="--i:5" href="#contacto"    data-i18n="nav.contacto">Contacto</a>
+  </nav>
+
+  <div class="sheet__foot">
+    <a class="link" data-href="email" href="#"><span data-text="email"></span></a>
+    <ul class="social">
+      <li><a class="social__link" data-href="linkedin"  href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"  data-icon="linkedin"></a></li>
+      <li><a class="social__link" data-href="github"    href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub"    data-icon="github"></a></li>
+    </ul>
+  </div>
+</div>
+
+<main id="contenido">
+
+  <section class="hero" id="inicio">
+    <div class="hero__light" aria-hidden="true"></div>
+
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <div class="hero__head">
+        <h1 class="display hero__name">Jesús López</h1>
+        <ul class="hero__roles" id="roles"></ul>
+        <p class="hero__sub mono" data-i18n="hero.sub"></p>
+      </div>
+
+      <div class="hero__meta">
+        <a class="hero__mail" data-href="email" href="#">
+          <span data-icon="mail"></span>
+          <span data-text="email"></span>
+        </a>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#proyectos" data-i18n="hero.cta1">Ver proyectos</a>
+          <a class="btn btn--ghost" id="hero-cv" href="assets/cv/Jesus_David_Lopez_Ahumada_CV_ES.pdf" download>
+            <span data-icon="download"></span>
+            <span data-i18n="hero.cta2">Descargar CV</span>
+          </a>
+        </div>
+
+        <ul class="social hero__social">
+          <li><a class="social__link" data-href="linkedin" href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-icon="linkedin"></a></li>
+          <li><a class="social__link" data-href="github"   href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub"   data-icon="github"></a></li>
+        </ul>
+      </div>
+      </div>
+
+      <div class="hero__portrait">
+        <picture>
+          <source media="(max-width: 47.99rem)" srcset="assets/img/jesus-lopez@sm.webp" type="image/webp">
+          <source srcset="assets/img/jesus-lopez.webp" type="image/webp">
+          <img src="assets/img/jesus-lopez.png" width="932" height="1500"
+               data-i18n-attr="alt:hero.alt" alt="Retrato de Jesús David López Ahumada"
+               fetchpriority="high" decoding="async">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="perfil">
+    <div class="wrap">
+      <div class="head reveal">
+        <div class="head__rule" aria-hidden="true"></div>
+        <h2 class="head__title" data-i18n="about.title">Perfil</h2>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p class="first" data-i18n="about.p1"></p>
+          <p data-i18n="about.p2"></p>
+        </div>
+
+        <dl class="facts reveal">
+          <div class="facts__row"><dt data-i18n="about.k1">Rol</dt><dd data-i18n="about.v1"></dd></div>
+          <div class="facts__row"><dt data-i18n="about.k2">Ubicación</dt><dd data-i18n="about.v2"></dd></div>
+          <div class="facts__row"><dt data-i18n="about.k3">Formación</dt><dd data-i18n="about.v3"></dd></div>
+          <div class="facts__row"><dt data-i18n="about.k4">Idiomas</dt><dd data-i18n="about.v4"></dd></div>
+          <div class="facts__row"><dt data-i18n="about.k5">Enfoque</dt><dd data-i18n="about.v5"></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--raised" id="stack">
+    <div class="wrap">
+      <div class="head reveal">
+        <div class="head__rule" aria-hidden="true"></div>
+        <h2 class="head__title" data-i18n="stack.title">Núcleo técnico</h2>
+        <p class="head__note" data-i18n="stack.note"></p>
+      </div>
+      <div class="bento" id="bento"></div>
+    </div>
+  </section>
+
+  <section class="section" id="proyectos">
+    <div class="wrap">
+      <div class="head reveal">
+        <div class="head__rule" aria-hidden="true"></div>
+        <h2 class="head__title" data-i18n="proy.title">Proyectos</h2>
+        <p class="head__note" data-i18n="proy.note"></p>
+      </div>
+      <div class="projects" id="proyectos-lista"></div>
+    </div>
+  </section>
+
+  <section class="section section--raised" id="experiencia">
+    <div class="wrap">
+      <div class="head reveal">
+        <div class="head__rule" aria-hidden="true"></div>
+        <h2 class="head__title" data-i18n="exp.title">Experiencia</h2>
+      </div>
+      <div class="timeline" id="experiencia-lista"></div>
+
+      <div class="head reveal" id="formacion">
+        <div class="head__rule" aria-hidden="true"></div>
+        <h2 class="head__title" data-i18n="form.title">Formación</h2>
+      </div>
+      <div class="timeline" id="formacion-lista"></div>
+    </div>
+  </section>
+
+  <section class="section" id="certificaciones">
+    <div class="wrap">
+      <div class="head reveal">
+        <div class="head__rule" aria-hidden="true"></div>
+        <h2 class="head__title" data-i18n="cert.title">Certificaciones</h2>
+        <p class="head__note" data-i18n="cert.note"></p>
+      </div>
+      <div class="certs" id="certs"></div>
+    </div>
+  </section>
+
+  <section class="section section--raised" id="cv">
+    <div class="wrap">
+      <div class="cv">
+        <div class="reveal">
+          <div class="head__rule" aria-hidden="true"></div>
+          <h2 class="head__title" data-i18n="cv.title">Hoja de vida</h2>
+          <p class="head__note" data-i18n="cv.note"></p>
+        </div>
+        <div class="cv__files reveal" id="cv-files"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contacto">
+    <div class="wrap">
+      <div class="head reveal">
+        <div class="head__rule" aria-hidden="true"></div>
+        <h2 class="head__title" data-i18n="con.title">Contacto</h2>
+        <p class="head__note" data-i18n="con.note"></p>
+      </div>
+
+      <div class="contact__grid reveal">
+        <a class="contact__mail" data-href="email" href="#">
+          <span data-icon="mail"></span>
+          <span data-text="email"></span>
+        </a>
+
+        <ul class="social social--labelled">
+          <li><a class="social__link" data-href="linkedin"  href="#" target="_blank" rel="noopener noreferrer"><span data-icon="linkedin"></span><span data-i18n="con.linkedin">LinkedIn</span></a></li>
+          <li><a class="social__link" data-href="github"    href="#" target="_blank" rel="noopener noreferrer"><span data-icon="github"></span><span data-i18n="con.github">GitHub</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <a class="footer__mark" href="#inicio">Jdlopez</a>
+    <span class="footer__note">
+      &copy; <span id="year">2026</span> Jesús David López Ahumada · <span data-i18n="foot.note">Barranquilla, Colombia</span>
+    </span>
+  </div>
+</footer>
+
+</div>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

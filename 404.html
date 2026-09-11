@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página no encontrada , Jesús López</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/tokens.css">
+<link rel="stylesheet" href="/assets/css/base.css">
+<link rel="stylesheet" href="/assets/css/components.css">
+<style>
+  .lost {
+    min-height: 100svh;
+    display: grid;
+    align-content: center;
+    gap: var(--sp-5);
+    max-width: var(--maxw);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+    position: relative;
+    z-index: 2;
+  }
+  .lost__code {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(3.5rem, 2rem + 10vw, 9rem);
+    line-height: 1;
+    letter-spacing: -.045em;
+    color: var(--fg);
+  }
+  .lost__code span { color: var(--fg-3); }
+  .lost p { color: var(--fg-2); max-width: 44ch; font-size: var(--t-lead); }
+  .lost a { justify-self: start; }
+</style>
+</head>
+<body>
+  <main class="lost">
+    <h1 class="lost__code">4<span>0</span>4</h1>
+    <p lang="es">Esta página no existe. Puede que el enlace esté mal escrito o que el contenido ya no esté aquí.</p>
+    <p lang="en" style="font-size:var(--t-sm)">This page doesn’t exist. The link may be mistyped, or the content may have moved.</p>
+    <a class="btn btn--primary" href="/">Volver al inicio · Back home</a>
+  </main>
+</body>
+</html>

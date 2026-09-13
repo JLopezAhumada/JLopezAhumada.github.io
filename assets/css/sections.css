@@ -1,7 +1,11 @@
 .hero {
   position: relative;
   isolation: isolate;
-  background: var(--ink-900);
+  background:
+    linear-gradient(to bottom,
+      #000 0%,
+      #000 calc(100% - 10rem),
+      var(--ink-900) 100%);
   min-height: 100svh;
   display: grid;
   align-items: center;
@@ -29,16 +33,23 @@
   display: grid;
 
   gap: var(--sp-5);
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) auto;
   grid-template-areas:
-    'head'
-    'portrait'
-    'meta';
+    'name  portrait'
+    'roles portrait'
+    'sub   sub'
+    'meta  meta';
+  align-items: center;
+  column-gap: var(--sp-4);
+  row-gap: 0;
 }
 
 .hero__copy     { display: contents; }
-.hero__head     { grid-area: head; }
-.hero__meta     { grid-area: meta; }
+.hero__head     { display: contents; }
+.hero__name     { grid-area: name; align-self: end; }
+.hero__roles    { grid-area: roles; align-self: start; }
+.hero__sub      { grid-area: sub; margin-top: var(--sp-4); }
+.hero__meta     { grid-area: meta; margin-top: var(--sp-5); }
 .hero__portrait { grid-area: portrait; }
 
 @media (min-width: 48rem) {
@@ -48,6 +59,12 @@
     align-items: center;
     gap: var(--sp-6);
   }
+
+  .hero__head  { display: block; grid-area: auto; }
+  .hero__name  { grid-area: auto; }
+  .hero__roles { grid-area: auto; }
+  .hero__sub   { grid-area: auto; margin-top: 0; }
+  .hero__meta  { grid-area: auto; margin-top: 0; }
 
   .hero__copy {
     grid-area: copy;
@@ -61,6 +78,13 @@
   font-size: var(--t-hero);
   margin-bottom: clamp(1.25rem, .9rem + 1.2vw, 1.9rem);
   color: var(--fg);
+}
+
+@media (max-width: 47.99rem) {
+  .hero__name {
+    font-size: clamp(1.95rem, 1.1rem + 4.4vw, 2.9rem);
+    margin-bottom: var(--sp-3);
+  }
 }
 
 .hero__roles {
@@ -82,7 +106,7 @@
   background: var(--fg-3);
 }
 
-@media (max-width: 34rem), (min-width: 48rem) and (max-width: 66rem) {
+@media (max-width: 47.99rem), (min-width: 48rem) and (max-width: 66rem) {
   .hero__roles { display: grid; justify-items: start; gap: .15rem; }
   .hero__roles li:not(:last-child)::after { display: none; }
 }
@@ -148,9 +172,20 @@
 
   .hero__portrait {
     justify-self: end;
-    max-width: min(46%, 11.5rem);
-    margin-block: calc(var(--sp-5) * -1) calc(var(--sp-4) * -1);
+    align-self: center;
+    width: min(44vw, 12rem);
+    max-width: none;
+    margin: 0;
   }
+  .hero__roles { font-size: 1rem; margin-bottom: 0; }
+  .hero__sub   { font-size: var(--t-xs); }
+}
+
+@media (max-width: 23.5rem) {
+
+  .hero__portrait { width: min(36vw, 8.5rem); }
+  .hero__name  { font-size: 1.8rem; }
+  .hero__roles { font-size: .9rem; }
 }
 
 .about__grid {

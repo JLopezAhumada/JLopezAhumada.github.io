@@ -110,20 +110,31 @@ ul, ol { padding: 0; list-style: none; }
 ::selection { background: var(--fg); color: var(--ink-900); }
 
 .skip {
-  position: absolute;
+  position: fixed;
   left: var(--sp-4);
   top: var(--sp-4);
   z-index: 200;
-  padding: var(--sp-3) var(--sp-5);
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  opacity: 0;
   background: var(--fg);
   color: var(--ink-900);
   border-radius: var(--r-pill);
   font-size: var(--t-sm);
   font-weight: 600;
-  transform: translateY(-180%);
-  transition: transform var(--dur-2) var(--ease);
 }
-.skip:focus { transform: translateY(0); }
+.skip:focus {
+  width: auto;
+  height: auto;
+  padding: var(--sp-3) var(--sp-5);
+  overflow: visible;
+  clip-path: none;
+  opacity: 1;
+}
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

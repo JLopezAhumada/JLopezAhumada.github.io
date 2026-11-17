@@ -1,9 +1,10 @@
 import { PERFIL } from './data.js';
 import { idiomaInicial, guardarIdioma, aplicarIdioma, TEXTOS } from './i18n.js';
 import { pintarIconos } from './icons.js';
-import { renderizar } from './render.js';
+import { renderizar, pintarDetalle } from './render.js';
 
 const $  = (s, r = document) => r.querySelector(s);
+let idiomaActual = 'es';
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
 const sinMovimiento = () =>
@@ -28,6 +29,7 @@ function iniciarIdioma() {
 
   const usar = (lang, guardar = true) => {
     actual = lang;
+    idiomaActual = lang;
     aplicarIdioma(lang);
     renderizar(lang);
     observarRevelado();
@@ -138,6 +140,27 @@ function iniciarMenu() {
   });
 }
 
+function iniciarDetalle() {
+  const dlg = $('#detalle');
+  let origen = null;
+
+  $('#proyectos-lista').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-proyecto]');
+    if (!b) return;
+    origen = b;
+    pintarDetalle(Number(b.dataset.proyecto), idiomaActual);
+    pintarIconos(dlg);
+    dlg.showModal();
+    dlg.scrollTop = 0;
+  });
+
+  $('#detalle-cerrar').addEventListener('click', () => dlg.close());
+
+  dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+
+  dlg.addEventListener('close', () => origen?.focus());
+}
+
 let observador = null;
 let salvavidas = null;
 
@@ -184,6 +207,7 @@ function iniciar() {
   iniciarNav();
   iniciarMenu();
   iniciarIdioma();
+  iniciarDetalle();
   $('#year').textContent = new Date().getFullYear();
 }
 

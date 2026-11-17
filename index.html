@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jesús López · Frontend Developer y Analista de Sistemas</title>
-<meta name="description" content="Portafolio de Jesús David López Ahumada. Frontend Developer y Analista de Sistemas en Barranquilla: JavaScript, Java, MySQL, redes y servidores Linux Debian.">
+<title>Jesús López · Desarrollador Full Stack Junior</title>
+<meta name="description" content="Portafolio de Jesús David López Ahumada, Desarrollador Full Stack Junior en Barranquilla: Angular, TypeScript, Kotlin, Spring Boot y PostgreSQL.">
 <meta name="author" content="Jesús David López Ahumada">
 <meta name="theme-color" content="#08080a">
 
 <meta property="og:type" content="profile">
-<meta property="og:title" content="Jesús López · Frontend Developer y Analista de Sistemas">
-<meta property="og:description" content="JavaScript, Java, MySQL, redes y servidores Linux Debian.">
+<meta property="og:title" content="Jesús López · Desarrollador Full Stack Junior">
+<meta property="og:description" content="Angular, TypeScript, Kotlin, Spring Boot y PostgreSQL.">
 <meta property="og:image" content="assets/img/jesus-lopez.png">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -29,15 +29,16 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Jesús David López Ahumada",
-  "jobTitle": "Frontend Developer y Analista de Sistemas",
+  "jobTitle": "Desarrollador Full Stack Junior",
   "address": { "@type": "PostalAddress", "addressLocality": "Barranquilla", "addressCountry": "CO" },
   "email": "jlahumada1430@hotmail.com",
   "knowsLanguage": ["es", "en"],
-  "knowsAbout": ["JavaScript", "Java", "PostgreSQL", "MySQL", "Redes TCP/IP", "Linux Debian", "Soporte TI"],
+  "knowsAbout": ["Angular", "TypeScript", "JavaScript", "Kotlin", "Java", "Spring Boot", "PostgreSQL", "MySQL", "Docker"],
   "alumniOf": { "@type": "CollegeOrUniversity", "name": "Institución Universitaria de Barranquilla" },
   "sameAs": [
     "https://www.linkedin.com/in/jdlopez30",
-    "https://github.com/JLopezAhumada"
+    "https://github.com/JLopezAhumada",
+    "https://jlopezahumada.github.io"
   ]
 }
 </script>
@@ -177,8 +178,7 @@
     <div class="wrap">
       <div class="head reveal">
         <div class="head__rule" aria-hidden="true"></div>
-        <h2 class="head__title" data-i18n="stack.title">Núcleo técnico</h2>
-        <p class="head__note" data-i18n="stack.note"></p>
+        <h2 class="head__title" data-i18n="stack.title">Habilidades técnicas</h2>
       </div>
       <div class="bento" id="bento"></div>
     </div>
@@ -216,7 +216,6 @@
       <div class="head reveal">
         <div class="head__rule" aria-hidden="true"></div>
         <h2 class="head__title" data-i18n="cert.title">Certificaciones</h2>
-        <p class="head__note" data-i18n="cert.note"></p>
       </div>
       <div class="certs" id="certs"></div>
     </div>
@@ -240,7 +239,6 @@
       <div class="head reveal">
         <div class="head__rule" aria-hidden="true"></div>
         <h2 class="head__title" data-i18n="con.title">Contacto</h2>
-        <p class="head__note" data-i18n="con.note"></p>
       </div>
 
       <div class="contact__grid reveal">
@@ -258,6 +256,12 @@
   </section>
 
 </main>
+
+<dialog class="detalle" id="detalle" aria-labelledby="detalle-titulo">
+  <button class="btn btn--icon detalle__cerrar" id="detalle-cerrar" type="button"
+          data-i18n-attr="aria-label:proy.cerrar" aria-label="Cerrar" data-icon="close"></button>
+  <div class="detalle__grid" id="detalle-contenido"></div>
+</dialog>
 
 <footer class="footer">
   <div class="wrap footer__inner">

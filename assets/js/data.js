@@ -10,35 +10,35 @@ export const PERFIL = {
 };
 
 export const ROLES = {
-  es: ['Frontend Developer', 'Analista de Sistemas', 'Soporte TI'],
-  en: ['Frontend Developer', 'Systems Analyst', 'IT Support']
+  es: ['Desarrollador Full Stack Junior', 'Estudiante de Ingeniería Telemática'],
+  en: ['Junior Full Stack Developer', 'Telematics Engineering Student']
 };
 
 export const STACK = [
   {
     span: 'wide', icon: 'code',
-    es: { titulo: 'Desarrollo' }, en: { titulo: 'Development' },
-    items: ['JavaScript ES6+', 'HTML5', 'CSS3', 'Java', 'POO', 'Swing', 'JDBC', 'PHP', 'VBA', 'SQL', 'Git']
+    es: { titulo: 'Frontend' }, en: { titulo: 'Frontend' },
+    items: ['Angular', 'TypeScript', 'JavaScript ES6+', 'HTML5', 'CSS3', 'Responsive', 'Accesibilidad', 'SEO']
   },
   {
-    span: 'wide', icon: 'network',
-    es: { titulo: 'Redes' }, en: { titulo: 'Networking' },
-    items: ['TCP/IP', 'DHCP', 'VLAN', 'Enrutamiento', 'Conmutación', 'VLSM', 'VPN', 'Wireshark', 'Packet Tracer']
-  },
-  {
-    span: 'third', icon: 'server',
-    es: { titulo: 'Sistemas' }, en: { titulo: 'Systems' },
-    items: ['Linux Debian', 'Windows', 'XAMPP', 'Usuarios', 'Permisos', 'Backups', 'AWS']
+    span: 'wide', icon: 'server',
+    es: { titulo: 'Backend' }, en: { titulo: 'Backend' },
+    items: ['Kotlin', 'Java', 'Spring Boot', 'Spring Security', 'API REST', 'JWT', 'JPA/Hibernate']
   },
   {
     span: 'third', icon: 'database',
     es: { titulo: 'Bases de datos' }, en: { titulo: 'Databases' },
-    items: ['PostgreSQL', 'MySQL', 'MariaDB', 'SQL Server', 'Modelado', 'DBeaver']
+    items: ['PostgreSQL', 'MySQL', 'SQL', 'Modelado relacional']
   },
   {
     span: 'third', icon: 'lifebuoy',
-    es: { titulo: 'Soporte TI' }, en: { titulo: 'IT Support' },
-    items: ['Mesa de ayuda N1', 'Diagnóstico', 'AnyDesk', 'RustDesk', 'UltraViewer']
+    es: { titulo: 'Herramientas' }, en: { titulo: 'Tools' },
+    items: ['Git', 'GitHub', 'Docker', 'Linux', 'Python', 'Groq', 'Ollama']
+  },
+  {
+    span: 'third', icon: 'network',
+    es: { titulo: 'Redes y soporte' }, en: { titulo: 'Networking and support' },
+    items: ['TCP/IP', 'Cisco CCNA', 'Soporte TI', 'Excel', 'VBA']
   }
 ];
 
@@ -46,81 +46,106 @@ export const PROYECTOS = [
   {
     destacado: true,
     anio: '2026',
-    stack: ['HTML5', 'CSS3', 'JavaScript ES6', 'JSON-LD', 'WebP', 'PWA', 'Git'],
-    enlaces: [],
+    ventana: 'fundacionlfpd.org',
+    stack: ['HTML5', 'CSS3', 'JavaScript', 'Web3Forms', 'Google Analytics 4', 'JSON-LD', 'Hostinger'],
+    demo: 'https://fundacionlfpd.org',
+    codigo: null,
+    imagenes: [
+      { src: 'assets/img/proyectos/fundacion-inicio.webp', ancho: 1280, alto: 800,
+        es: 'Página de inicio del sitio de la fundación', en: 'Foundation website home page' },
+      { src: 'assets/img/proyectos/fundacion-galeria.webp', ancho: 1280, alto: 800,
+        es: 'Galería de fotos de las jornadas', en: 'Photo gallery of the foundation activities' },
+      { src: 'assets/img/proyectos/fundacion-donar.webp', ancho: 1280, alto: 800,
+        es: 'Formulario previo a la donación', en: 'Form shown before donating' },
+      { src: 'assets/img/proyectos/fundacion-movil.webp', ancho: 600, alto: 1298,
+        es: 'El sitio en un teléfono', en: 'The website on a phone' }
+    ],
     es: {
       tipo: 'Proyecto independiente',
-      titulo: 'Sitio institucional · Fundación Los Fuertes del Pueblo de Dios',
-      resumen: 'Sitio completo de una fundación social, diseñado y desarrollado de extremo a extremo con HTML5, CSS3 y JavaScript, sin frameworks.',
+      titulo: 'Sitio web de la Fundación Los Fuertes del Pueblo de Dios',
+      resumen: 'Sitio bilingüe de 10 páginas para una fundación social de Barranquilla, publicado con dominio propio.',
       puntos: [
-        'Nueve secciones: inicio, nosotros, galería, noticias, donaciones, apadrinamiento, voluntariado, contacto y páginas legales, con <b>maquetación responsive</b> para móvil, tablet y escritorio.',
-        'CSS estructurado <b>por capas</b> sobre tokens de diseño reutilizables: variables, reset, base, layout, componentes y animaciones.',
-        'Componentes propios en JavaScript: menú accesible, <b>lightbox navegable por teclado</b>, validación de formularios y <b>cambio de idioma sin recargar</b>.',
-        '<b>SEO, rendimiento y accesibilidad</b>: datos estructurados JSON-LD, Open Graph, imágenes WebP diferidas, sitemap, manifiesto PWA, ARIA y soporte de <code>prefers-reduced-motion</code>.',
-        'Entregado versionado en Git y con <b>guía de mantenimiento</b>, para que la fundación actualice noticias y fotos por su cuenta.'
+        'Diseñado y programado con <b>HTML5, CSS3 y JavaScript</b>, sin frameworks, responsive y con cambio de idioma sin recargar.',
+        'Formularios de contacto, voluntariado y donantes con <b>Web3Forms</b>, validación en el navegador y respaldo por WhatsApp.',
+        '<b>Google Analytics 4</b> con consentimiento de cookies, Search Console, sitemap y datos estructurados JSON-LD.',
+        'Publicado en <b>Hostinger</b> con un script en Python que genera la versión de producción.'
       ]
     },
     en: {
       tipo: 'Independent project',
-      titulo: 'Institutional website · Los Fuertes del Pueblo de Dios Foundation',
-      resumen: 'A complete website for a social foundation, designed and built end to end with HTML5, CSS3, and vanilla JavaScript, no frameworks.',
+      titulo: 'Los Fuertes del Pueblo de Dios Foundation website',
+      resumen: 'A bilingual 10-page website for a social foundation in Barranquilla, live on its own domain.',
       puntos: [
-        'Nine sections: home, about, gallery, news, donations, sponsorship, volunteering, contact, and legal pages, with a <b>responsive layout</b> for mobile, tablet, and desktop.',
-        'CSS structured <b>in layers</b> on top of reusable design tokens: variables, reset, base, layout, components, and animations.',
-        'Custom JavaScript components: accessible menu, <b>keyboard-navigable lightbox</b>, form validation, and <b>language switching without a reload</b>.',
-        '<b>SEO, performance, and accessibility</b>: JSON-LD structured data, Open Graph, lazy-loaded WebP images, sitemap, PWA manifest, ARIA, and <code>prefers-reduced-motion</code> support.',
-        'Delivered version-controlled in Git with a <b>maintenance guide</b>, so the foundation can update news and photos on its own.'
+        'Designed and built with <b>HTML5, CSS3, and JavaScript</b>, no frameworks, responsive, with language switching without a reload.',
+        'Contact, volunteer, and donor forms with <b>Web3Forms</b>, client-side validation, and a WhatsApp fallback.',
+        '<b>Google Analytics 4</b> with cookie consent, Search Console, a sitemap, and JSON-LD structured data.',
+        'Deployed on <b>Hostinger</b> with a Python script that builds the production version.'
       ]
     }
   },
   {
     anio: '2026',
-    stack: ['Java SE', 'Swing', 'JDBC', 'MySQL', 'jBCrypt', 'iText 5', 'Apache POI'],
-    enlaces: [],
+    ventana: 'Nómina · Angular',
+    stack: ['Angular', 'TypeScript', 'Kotlin', 'Spring Boot', 'PostgreSQL', 'Docker', 'JWT', 'Groq'],
+    demo: null,
+    codigo: null,
+    imagenes: [
+      { src: 'assets/img/proyectos/nomina-chat.webp', ancho: 1280, alto: 800,
+        es: 'El asistente responde con la nómina por departamento', en: 'The assistant answers with payroll by department' },
+      { src: 'assets/img/proyectos/nomina-permisos.webp', ancho: 1280, alto: 800,
+        es: 'Un empleado pregunta por otro y el asistente solo le muestra sus propios datos', en: 'An employee asks about a coworker and the assistant only shows their own data' },
+      { src: 'assets/img/proyectos/nomina-panel.webp', ancho: 1280, alto: 800,
+        es: 'Panel con trabajadores, nómina liquidada y vacaciones por aprobar', en: 'Dashboard with employees, payroll totals, and pending vacations' },
+      { src: 'assets/img/proyectos/nomina-inicio.webp', ancho: 1280, alto: 800,
+        es: 'Pantalla inicial del asistente con preguntas sugeridas', en: 'Assistant start screen with suggested questions' }
+    ],
     es: {
       tipo: 'Académico · IUB · equipo de 2',
-      titulo: 'Sistema de control de nómina y vacacional',
-      resumen: 'Aplicación de escritorio para liquidar nómina y vacaciones, con control de acceso por roles, auditoría y exportación de reportes.',
+      titulo: 'Sistema de nómina y vacaciones',
+      resumen: 'Aplicación web full stack para liquidar nómina y vacaciones, con un asistente de IA que responde preguntas sobre los datos.',
       puntos: [
-        'Jerarquía de empleados modelada con una <b>clase abstracta</b> y tres subclases <b>polimórficas</b>: administrativo con subsidio de transporte, ventas con comisión y sistemas con bono técnico.',
-        'Once ventanas en <b>Java Swing</b> implementando <code>ActionListener</code> y <code>ChangeListener</code>: login, gestión, búsqueda, historial de pagos, bitácora y reportes por departamento.',
-        '<b>Control de acceso por roles</b> con permisos en base de datos, contraseñas con <b>hash BCrypt</b> y bitácora de auditoría.',
-        'Persistencia en <b>MySQL vía JDBC</b> y exportación de reportes a <b>PDF con iText</b> y <b>Excel con Apache POI</b>.'
+        'Migración de una aplicación de escritorio en Java Swing a una <b>API REST en Kotlin y Spring Boot</b> con 10 módulos y un <b>frontend en Angular</b>.',
+        '<b>Autenticación JWT</b> con Spring Security, control de acceso por roles, contraseñas con BCrypt y bitácora de auditoría.',
+        '<b>Asistente con IA</b>: el backend arma un resumen de PostgreSQL filtrado por los permisos de cada usuario y lo envía a un modelo de Groq. Un empleado solo ve sus propios datos.',
+        'Al pasar de Ollama local a Groq, la respuesta bajó de <b>2 minutos a 1 segundo</b>.'
       ]
     },
     en: {
       tipo: 'Academic · IUB · team of 2',
-      titulo: 'Payroll and vacation control system',
-      resumen: 'A desktop application for payroll and vacation settlement, with role-based access control, auditing, and report export.',
+      titulo: 'Payroll and vacation system',
+      resumen: 'A full stack web application for payroll and vacation settlement, with an AI assistant that answers questions about the data.',
       puntos: [
-        'Employee hierarchy modeled with an <b>abstract class</b> and three <b>polymorphic</b> subclasses: administrative staff with a transport subsidy, sales with commission, and systems with a technical bonus.',
-        'Eleven <b>Java Swing</b> windows implementing <code>ActionListener</code> and <code>ChangeListener</code>: login, management, search, payment history, activity log, and department reports.',
-        '<b>Role-based access control</b> with database-level permissions, <b>BCrypt password hashing</b>, and an audit log.',
-        'Persistence in <b>MySQL via JDBC</b>, with report export to <b>PDF using iText</b> and <b>Excel using Apache POI</b>.'
+        'Migrated a Java Swing desktop app to a <b>Kotlin and Spring Boot REST API</b> with 10 modules and an <b>Angular frontend</b>.',
+        '<b>JWT authentication</b> with Spring Security, role-based access control, BCrypt password hashing, and an audit log.',
+        '<b>AI assistant</b>: the backend builds a PostgreSQL summary filtered by each user’s permissions and sends it to a Groq model. An employee only sees their own data.',
+        'Moving from local Ollama to Groq cut response time from <b>2 minutes to 1 second</b>.'
       ]
     }
   },
   {
     anio: '2025',
-    stack: ['Excel', 'VBA', 'Formularios', 'Validación de datos'],
-    enlaces: [],
+    ventana: 'Excel · VBA',
+    stack: ['Excel', 'VBA', 'Formularios'],
+    demo: null,
+    codigo: null,
+    imagenes: [],
     es: {
       tipo: 'Agropecuaria y Movilidad S.A.S.',
       titulo: 'Automatización de procesos de planta',
-      resumen: 'Tres procesos de planta que se llevaban en papel, convertidos en macros de Excel. La consolidación por turno bajó de dos horas a veinte minutos.',
+      resumen: 'Tres procesos que se llevaban en papel, convertidos en macros de Excel. La consolidación por turno bajó de dos horas a veinte minutos.',
       puntos: [
-        '<b>Estadística de desposte</b>: control de pesos por corte en cada canastilla, con consolidación automática de la producción del turno.',
-        '<b>Guía de transporte</b>: generación de la orden para conductores a partir de la guía presentada y el peso transportado.',
+        '<b>Estadística de desposte</b>: control de pesos por corte en cada canastilla, con consolidación automática del turno.',
+        '<b>Guía de transporte</b>: la orden para conductores sale de la guía presentada y el peso transportado.',
         '<b>Inventario de canastillas</b>: conteo por proveedor para controlar despachos y devoluciones.'
       ]
     },
     en: {
       tipo: 'Agropecuaria y Movilidad S.A.S.',
       titulo: 'Plant process automation',
-      resumen: 'Three plant processes that ran on paper, turned into Excel macros. Shift consolidation dropped from two hours to twenty minutes.',
+      resumen: 'Three paper-based processes turned into Excel macros. Shift consolidation dropped from two hours to twenty minutes.',
       puntos: [
-        '<b>Deboning statistics</b>: weight-per-cut control for each crate, with automatic consolidation of the shift output.',
-        '<b>Transport waybill</b>: driver order generation from the submitted waybill and the transported weight.',
+        '<b>Deboning statistics</b>: weight-per-cut control for each crate, with automatic shift consolidation.',
+        '<b>Transport waybill</b>: the driver order is generated from the submitted waybill and the transported weight.',
         '<b>Crate inventory</b>: per-supplier counting to control shipments and returns.'
       ]
     }
@@ -129,79 +154,31 @@ export const PROYECTOS = [
 
 export const EXPERIENCIA = [
   {
-    anio: 'Sep 2025 - Sep 2026', anioEn: 'Sep 2025 - Sep 2026',
+    anio: 'Mar 2026 - Actualidad', anioEn: 'Mar 2026 - Present',
     lugar: 'Barranquilla, Colombia',
-    stack: ['VBA', 'Linux Debian', 'Redes N1', 'HTML', 'CSS', 'JavaScript'],
-    es: {
-      rol: 'Analista de Sistemas', org: 'Agropecuaria y Movilidad S.A.S.', etiqueta: 'Empleo',
-      puntos: [
-        'Automaticé <b>tres procesos de planta</b> con macros VBA. La consolidación de datos bajó de <b>dos horas a veinte minutos por turno</b> y se eliminó el registro en papel.',
-        'Administré el servidor de la compañía y el <b>soporte TI y de redes nivel 1</b> de la sede: conectividad, cuentas de usuario, estaciones de trabajo y soporte remoto.',
-        'Construí una <b>aplicación de escritorio</b> que genera cuentas de cobro con consecutivo automático, en reemplazo del llenado manual de plantillas.'
-      ]
-    },
-    en: {
-      rol: 'Systems Analyst', org: 'Agropecuaria y Movilidad S.A.S.', etiqueta: 'Employment',
-      puntos: [
-        'Automated <b>three plant processes</b> with VBA macros. Data consolidation dropped from <b>two hours to twenty minutes per shift</b> and paper logging was eliminated.',
-        'Administered the company server and <b>Tier-1 IT and network support</b> for the site: connectivity, user accounts, workstations, and remote support.',
-        'Built a <b>desktop application</b> that generates invoices with automatic sequencing, replacing manual template filling.'
-      ]
-    }
+    es: { rol: 'Desarrollador Web', org: 'Fundación Social Los Fuertes del Pueblo de Dios', etiqueta: 'Independiente' },
+    en: { rol: 'Web Developer', org: 'Los Fuertes del Pueblo de Dios Social Foundation', etiqueta: 'Freelance' }
   },
   {
-    anio: '2026', anioEn: '2026',
+    anio: 'Sep 2025 - Sep 2026', anioEn: 'Sep 2025 - Sep 2026',
     lugar: 'Barranquilla, Colombia',
-    stack: ['HTML5', 'CSS3', 'JavaScript ES6', 'Git'],
-    es: {
-      rol: 'Desarrollador Web Front-End', org: 'Fundación Social Los Fuertes del Pueblo de Dios', etiqueta: 'Independiente',
-      puntos: [
-        'Diseñé y desarrollé el <b>sitio institucional completo</b> con HTML5, CSS3 y JavaScript, sin frameworks.',
-        'Programé componentes propios: menú accesible, lightbox por teclado, validación de formularios y <b>cambio de idioma sin recargar</b>.',
-        'Optimicé SEO, rendimiento y accesibilidad, y entregué el proyecto con <b>guía de mantenimiento</b>.'
-      ]
-    },
-    en: {
-      rol: 'Front-End Web Developer', org: 'Los Fuertes del Pueblo de Dios Social Foundation', etiqueta: 'Independent',
-      puntos: [
-        'Designed and built the <b>full institutional website</b> with HTML5, CSS3, and vanilla JavaScript, no frameworks.',
-        'Built custom components: accessible menu, keyboard lightbox, form validation, and <b>language switching without a reload</b>.',
-        'Optimized SEO, performance, and accessibility, and delivered the project with a <b>maintenance guide</b>.'
-      ]
-    }
+    es: { rol: 'Analista de Sistemas', org: 'Agropecuaria y Movilidad S.A.S.', etiqueta: 'Empleo' },
+    en: { rol: 'Systems Analyst', org: 'Agropecuaria y Movilidad S.A.S.', etiqueta: 'Employment' }
   }
 ];
 
 export const FORMACION = [
   {
-    anio: '2024 - 2028 est.', anioEn: '2024 - 2028 est.',
-    lugar: 'IUB · Barranquilla',
-    stack: [],
-    es: {
-      rol: 'Ingeniería Telemática', org: 'Institución Universitaria de Barranquilla', etiqueta: 'En curso',
-      puntos: [
-        'Carrera universitaria por ciclos propedéuticos. Termino el ciclo de <b>Tecnólogo en Gestión de Sistemas Informáticos</b> y paso al <b>ciclo profesional</b> de Ingeniería Telemática.'
-      ]
-    },
-    en: {
-      rol: 'Telematics Engineering', org: 'Institución Universitaria de Barranquilla', etiqueta: 'In progress',
-      puntos: [
-        'University degree in propaedeutic cycles. Completing the <b>Technologist in Information Systems Management</b> cycle and moving on to the <b>professional cycle</b> of Telematics Engineering.'
-      ]
-    }
+    anio: 'Abr 2024 - 2028', anioEn: 'Apr 2024 - 2028',
+    lugar: 'Barranquilla, Colombia',
+    es: { rol: 'Ingeniería Telemática', org: 'Institución Universitaria de Barranquilla · Tecnólogo en Gestión de Sistemas Informáticos', etiqueta: 'En curso' },
+    en: { rol: 'Telematics Engineering', org: 'Institución Universitaria de Barranquilla · Technologist in Information Systems Management', etiqueta: 'In progress' }
   },
   {
-    anio: '2023 - 2024', anioEn: '2023 - 2024',
-    lugar: 'Litoral · Barranquilla',
-    stack: [],
-    es: {
-      rol: 'Técnico Profesional en Programación Web', org: 'Litoral', etiqueta: 'Titulado',
-      puntos: ['Título obtenido, con <b>reconocimientos por liderazgo y trabajo en equipo</b>.']
-    },
-    en: {
-      rol: 'Professional Technician in Web Programming', org: 'Litoral', etiqueta: 'Degree awarded',
-      puntos: ['Degree awarded, with <b>recognition for leadership and teamwork</b>.']
-    }
+    anio: 'Ago 2023 - Ago 2024', anioEn: 'Aug 2023 - Aug 2024',
+    lugar: 'Barranquilla, Colombia',
+    es: { rol: 'Técnico Profesional en Programación Web', org: 'Litoral', etiqueta: 'Titulado' },
+    en: { rol: 'Professional Technician in Web Programming', org: 'Litoral', etiqueta: 'Degree awarded' }
   }
 ];
 

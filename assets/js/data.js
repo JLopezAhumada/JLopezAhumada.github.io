@@ -85,10 +85,15 @@ export const PROYECTOS = [
   },
   {
     anio: '2026',
-    ventana: 'Nómina · Angular',
-    stack: ['Angular', 'TypeScript', 'Kotlin', 'Spring Boot', 'PostgreSQL', 'Docker', 'JWT', 'Groq'],
-    demo: null,
+    ventana: 'proyecto-nomina-angular.vercel.app',
+    stack: ['Angular', 'TypeScript', 'Kotlin', 'Spring Boot', 'PostgreSQL', 'Supabase', 'Docker', 'JWT', 'Groq'],
+    demo: 'https://proyecto-nomina-angular.vercel.app',
     codigo: null,
+
+    aviso: {
+      es: 'La primera carga puede tardar unos 2 minutos mientras el servidor despierta.',
+      en: 'The first load may take about 2 minutes while the server wakes up.'
+    },
     imagenes: [
       { src: 'assets/img/proyectos/nomina-chat.webp', ancho: 1280, alto: 800,
         es: 'El asistente responde con la nómina por departamento', en: 'The assistant answers with payroll by department' },
@@ -106,8 +111,9 @@ export const PROYECTOS = [
       puntos: [
         'Migración de una aplicación de escritorio en Java Swing a una <b>API REST en Kotlin y Spring Boot</b> con 10 módulos y un <b>frontend en Angular</b>.',
         '<b>Autenticación JWT</b> con Spring Security, control de acceso por roles, contraseñas con BCrypt y bitácora de auditoría.',
-        '<b>Asistente con IA</b>: el backend arma un resumen de PostgreSQL filtrado por los permisos de cada usuario y lo envía a un modelo de Groq. Un empleado solo ve sus propios datos.',
-        'Al pasar de Ollama local a Groq, la respuesta bajó de <b>2 minutos a 1 segundo</b>.'
+        '<b>Asistente con IA</b> sobre un modelo de Groq: consulta la base de datos con <b>tool calling</b>, y cada consulta respeta los permisos del usuario. Un empleado solo ve sus propios datos.',
+        'Al pasar de Ollama local a Groq, la respuesta bajó de <b>2 minutos a 1 segundo</b>.',
+        'Desplegado con el frontend en <b>Vercel</b>, el backend en <b>Render</b> con Docker y la base de datos en <b>Supabase</b>.'
       ]
     },
     en: {
@@ -117,8 +123,9 @@ export const PROYECTOS = [
       puntos: [
         'Migrated a Java Swing desktop app to a <b>Kotlin and Spring Boot REST API</b> with 10 modules and an <b>Angular frontend</b>.',
         '<b>JWT authentication</b> with Spring Security, role-based access control, BCrypt password hashing, and an audit log.',
-        '<b>AI assistant</b>: the backend builds a PostgreSQL summary filtered by each user’s permissions and sends it to a Groq model. An employee only sees their own data.',
-        'Moving from local Ollama to Groq cut response time from <b>2 minutes to 1 second</b>.'
+        '<b>AI assistant</b> on a Groq model: it queries the database through <b>tool calling</b>, and every query respects the user’s permissions. An employee only sees their own data.',
+        'Moving from local Ollama to Groq cut response time from <b>2 minutes to 1 second</b>.',
+        'Deployed with the frontend on <b>Vercel</b>, the backend on <b>Render</b> with Docker, and the database on <b>Supabase</b>.'
       ]
     }
   },

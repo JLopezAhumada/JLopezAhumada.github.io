@@ -356,6 +356,12 @@
   color: var(--fg-3);
 }
 .project__private svg { width: .95rem; height: .95rem; }
+.project__aviso {
+  flex-basis: 100%;
+  font-size: var(--t-xs);
+  line-height: 1.5;
+  color: var(--fg-3);
+}
 
 .project__points { display: grid; gap: .65rem; }
 .project__points li {

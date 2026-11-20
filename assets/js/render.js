@@ -50,7 +50,8 @@ function botones(p, lang) {
     ? `<a class="btn btn--ghost btn--sm" href="${esc(p.codigo)}" target="_blank" rel="noopener noreferrer">
          <span data-icon="github"></span>GitHub</a>`
     : `<span class="project__private"><span data-icon="lock"></span>${esc(t['proy.privado'])}</span>`;
-  return demo + codigo;
+  const aviso = p.aviso ? `<p class="project__aviso">${esc(p.aviso[lang])}</p>` : '';
+  return demo + codigo + aviso;
 }
 
 function unProyecto(p, i, lang) {
